@@ -1,0 +1,10 @@
+
+<ul class="list-group">
+    <a href="{% url 'project:projects' %}" class="list-group-item bg-info text-white" >Все проекты</a>
+    <a href="{% url 'project:projects_filter' 'start' %}" class="list-group-item bg-info text-white" >Старт</a>
+    <a href="{% url 'project:projects_filter' 'discussion' %}"  class="list-group-item bg-info text-white" >Обсуждение</a>
+    <a href="{% url 'project:projects_filter' 'work' %}"  class="list-group-item bg-info text-white" >В работе</a>
+    <a href="{% url 'project:projects_filter' 'pause' %}" class="list-group-item bg-info text-white" >Пауза</a>
+    <a href="{% url 'project:projects_filter' 'close' %}" class="list-group-item bg-info text-white" >Закрытие</a>
+    <a href="{% url 'project:projects_filter' 'finish' %}" class="list-group-item bg-info text-white" >Финиш</a>
+</ul>

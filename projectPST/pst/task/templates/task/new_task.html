@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}New task{% endblock %}
+
+{% block content %}
+
+<style>
+    .form-group input, select {width:100%;height: 100%;border-radius:3px;}
+</style>
+
+
+<div class="container">
+  <div class="row">
+      <div class="col"></div>
+      <div class="col bg-dark text-white margin-top-text">
+
+            <form  action="." method="post">
+                {% if new_project %}
+                     <h1 class="h3 text-center mb-3 font-weight-normal">Задача была добавлен.</h1>
+                {% else %}
+                    <h1 class="h3 text-center mb-3 font-weight-normal">Добавьте новую задачу.</h1>
+                {% endif %}
+
+
+                {% for field in form %}
+                    <div class="form-group">
+                        {{field.label_tag}}
+                        <div>{{field}}</div>
+                    </div>
+                {% endfor %}
+
+                {% csrf_token %}
+                <p><input type="submit" class="btn btn-info" value="Добавить"></p>
+            </form>
+      </div>
+      <div class="col"></div>
+  </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Task{% endblock %}
+
+{% block content %}
+
+
+<main class="container margin-top-text">
+    <div class="row">
+        <div class="col">
+
+            <div class="card mb-3">
+                <div class="card-header text-center">
+                     {{ task.task_step }} / {{task.task_step.step_project}}
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ task.task_name }}</h5>
+                    <p class="card-text">{{ task.task_specification }}</p>
+                    <p class="card-text">{{ task.task_name }}</p>
+                    <p class="card-text">Текущий статус: {{ task.task_status }}</p>
+                    <p class="card-text">Дата начала: {{ task.task_date_start }}
+                        Дата завершения: {{ task.task_date_finish }}
+                        Длительность (дни): {{ task.duration_task }}
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>   
+</main>
+
+{% endblock %}

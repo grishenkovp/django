@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Tasks{% endblock %}
+
+{% block content %}
+
+
+<main class="container margin-top-text">
+    <div class="row">
+        <div class="col-2">
+        {% include 'task/menu.html' %}
+        </div>
+        <div class="col-10">
+            {% for task in tasks %}
+            <div class="card mb-3">
+                <div class="card-header text-center">
+                    {{ task.task_step }} / {{task.task_step.step_project}}
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ task.task_name }}</h5>
+                    <p class="card-text">{{ task.task_specification }}</p>
+                    <p class="card-text">{{ task.task_user }}</p>
+                    <a href="{{task.get_absolute_url}}" class="btn btn-info">Подробности</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</main>
+
+{% endblock %}

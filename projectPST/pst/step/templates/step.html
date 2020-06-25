@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Step{% endblock %}
+
+{% block content %}
+
+
+<main class="container margin-top-text">
+    <div class="row">
+        <div class="col">
+
+            <div class="card mb-3">
+                <div class="card-header text-center">
+                     {{ step.step_project }} / {{step.step_project.project_client}}
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ step.step_name }}</h5>
+                    <p class="card-text">{{ step.step_specification_short }}</p>
+                    <p class="card-text">{{ step.step_specification_full }}</p>
+                    <p class="card-text">Текущий статус: {{ step.step_status }}</p>
+                    <p class="card-text">Дата начала: {{ step.step_date_start }}
+                        Дата завершения: {{ step.step_date_finish }}
+                        Длительность (дни): {{ step.duration_step }}
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>   
+</main>
+
+{% endblock %}

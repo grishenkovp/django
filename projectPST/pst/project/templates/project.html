@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Project{% endblock %}
+
+{% block content %}
+
+
+<main class="container margin-top-text">
+    <div class="row">
+        <div class="col">
+
+            <div class="card mb-3">
+                <div class="card-header text-center">
+                    {{ project.project_client }}
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ project.project_name }}</h5>
+                    <p class="card-text">{{ project.project_specification_short }}</p>
+                    <p class="card-text">{{ project.project_specification_full }}</p>
+                    <p class="card-text">Тим-лидер: {{ project.project_team_leader }}</p>
+                    <p class="card-text">Текущий статус: {{ project.project_status }}</p>
+                    <p class="card-text">Дата начала: {{ project.project_date_start }}
+                        Дата завершения: {{ project.project_date_finish }}
+                        Длительность (дни): {{ project.duration_project }}
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

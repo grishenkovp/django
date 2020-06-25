@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+
+
+<main class="container margin-top-text">
+    <div class="row">
+        <div class="col-2">
+        {% include 'project/menu.html' %}
+        </div>
+        <div class="col-10">
+            {% for project in projects %}
+            <div class="card mb-3">
+                <div class="card-header text-center">
+                    {{ project.project_client }}
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ project.project_name }}</h5>
+                    <p class="card-text">{{ project.project_specification_short }}</p>
+                    <p class="card-text">{{ project.project_specification_full }}</p>
+                    <a href="{{project.get_absolute_url}}" class="btn btn-info">Подробности</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</main>
+
+{% endblock %}

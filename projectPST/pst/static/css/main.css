@@ -1,0 +1,26 @@
+*{
+padding:0;
+margin:0;
+}
+
+body{
+    background-image: url(/static/img/background.jpg);
+    background-size: 100%;
+    background-attachment:fixed;
+    }
+
+a {
+    text-decoration: none;
+    }
+
+a:hover {
+    text-decoration: none;
+    }
+
+.margin-top-log{
+    margin-top:130px;
+}
+
+.margin-top-text{
+    margin-top:100px;
+}
